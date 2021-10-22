@@ -18,7 +18,7 @@ public class MessageController {
 
     @GetMapping
     public Iterable<Message> readAllMessages() {
-        return messageRepository.findAll();
+        return messageRepository.findAllByOrderByCreationDateDesc();
     }
 
     @PostMapping

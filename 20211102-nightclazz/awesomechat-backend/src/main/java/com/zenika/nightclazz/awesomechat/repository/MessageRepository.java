@@ -5,4 +5,5 @@ import org.springframework.cloud.gcp.data.datastore.repository.DatastoreReposito
 
 public interface MessageRepository extends DatastoreRepository<Message, Long> {
 
+    Iterable<Message> findAllByOrderByCreationDateDesc();
 }
