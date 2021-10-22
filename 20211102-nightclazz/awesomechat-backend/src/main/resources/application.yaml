@@ -1,0 +1,5 @@
+server:
+  port: ${PORT:8080}
+  servlet:
+    context-path: /api
+spring.cloud.gcp.datastore.namespace: ${DATASTORE_NAMESPACE:test}
