@@ -17,6 +17,7 @@ In this nightclazz, we are building and deploying an application using only serv
     * Post new messages
     * Go check content in the Datastore service
 * Slides on Firebase
+* Back to the application (the frontend)
     * Live code for the missing part
     * Go the application hosted on Firebase
     * Post a new message and check the application being updated
@@ -36,6 +37,8 @@ In this nightclazz, we are building and deploying an application using only serv
 gcloud services enable run.googleapis.com
 ```
 * Set Datastore in Datastore mode (`eur3` region)
+
+
 
 # Live code for the missing part
 * Go to 20211102-nightclazz/awesomechat-backend
@@ -126,7 +129,7 @@ curl -d 'Hello world!' -H 'Content-Type: plain/text' -X POST http://localhost:80
 ```
 cd awesomechat-backend
 gcloud run deploy awesomechat-backend --source=. \
-    --cpu=1 \
+    --cpu=2 \
     --memory=2Gi \
     --max-instances=3 \
     --platform=managed \
