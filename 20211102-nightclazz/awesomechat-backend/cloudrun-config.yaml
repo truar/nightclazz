@@ -13,10 +13,13 @@ spec:
       containerConcurrency: 80
       timeoutSeconds: 300
       containers:
-      - image: gcr.io/${PROJECT_ID}/backend:${IMAGE_VERSION}
+      - image: europe-west1-docker.pkg.dev/nightclazz-preparation-0211/cloud-run-source-deploy/awesomechat-backend:latest
+        env:
+        - name: DATASTORE_NAMESPACE
+          value: cloud
         resources:
           limits:
-            cpu: 2000m
+            cpu: 2
             memory: 2Gi
   traffic:
     - percent: 100
