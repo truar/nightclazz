@@ -186,3 +186,12 @@ curl -d 'Hello world!' -H 'Content-Type: plain/text' -X POST https://awesomechat
 firebase deploy --project=20211102-nightclazz --only hosting
 ```
 
+Bonus:
+* Deployment using a descriptor file
+```shell script
+gcloud beta run services replace cloudrun-config.yaml \
+          --platform=managed --region=europe-west1
+gcloud run services add-iam-policy-binding awesomechat-backend \
+  --platform=managed --region=europe-west1 \
+  --member="allUsers" --role="roles/run.invoker"
+``` 
