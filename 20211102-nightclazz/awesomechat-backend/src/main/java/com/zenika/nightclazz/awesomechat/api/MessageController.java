@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 
+/*
+ * TODO-05 : Review this class
+ */
 @RestController
 @RequestMapping("/messages")
 public class MessageController {

@@ -137,11 +137,14 @@ gcloud run deploy awesomechat-backend --source=. \
     --allow-unauthenticated \
     --set-env-vars=DATASTORE_NAMESPACE=cloud
 
-curl -d 'Hello world!' -H 'Content-Type: plain/text' -X POST https://awesomechat-backend-4qxvmpfnbq-ew.a.run.app/api/messages
+curl -d 'Hello world!' -H 'Content-Type: plain/text' -X POST {URL FROM CLOUD RUN}/api/messages
 ```
+* Go check the logs of Cloud Run to show them the ouput (start time and others)
+
 
 * Go to the 20211102-nightclazz/awesomechat-frontend
-* Check the `awesomechat.vue` file
+* Check the vue.config.js file (for local reverse proxy)
+* Check the `awesomechat.vue` file (only add the url missing)
 ```js
  methods: {
     async fetchMessages() {
@@ -161,10 +164,22 @@ curl -d 'Hello world!' -H 'Content-Type: plain/text' -X POST https://awesomechat
     await this.fetchMessages()
   }
 ```
-* See that we have a form to send our message
+* See that we have a form to send our message (by running the application)
+```shell script
+yarn serve
+```
 * Add the post and get messages
+* Then, build the application for the production
+```shell script
+yarn build
+```
 
-* `firebase init`
+
+* Go to firebase Console
+* Add the project as Firebase resource
+    * Name: 20211102-nightclazz
+    * No need for Analytics
+* Then, make your frontend a firebase hosting project : `firebase init`
     * Select `Hosting`
     * Set the project ID: 20211102-nightclazz
     * dist as public folder
@@ -182,9 +197,12 @@ curl -d 'Hello world!' -H 'Content-Type: plain/text' -X POST https://awesomechat
 }
 ```
 * Deploying using Firebase cmd (check for parameters)
+    * 
 ```shell script
 firebase deploy --project=20211102-nightclazz --only hosting
 ```
+
+* Go to the website (URL on firebase: https://20211102-nightclazz.web.app/)
 
 Bonus:
 * Deployment using a descriptor file

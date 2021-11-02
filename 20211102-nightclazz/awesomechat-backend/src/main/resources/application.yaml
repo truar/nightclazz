@@ -1,9 +1,4 @@
-server:
-  port: ${PORT:8080}
-  servlet:
-    context-path: /api
-
-spring.cloud.gcp.datastore.namespace: ${DATASTORE_NAMESPACE:test}
+# TODO-06 : Add missing properties
 
 logging:
   level:
