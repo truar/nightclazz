@@ -55,7 +55,7 @@ curl http://localhost:8080/api/
 cd mygreatapp-api
 gcloud run deploy mygreatapp-api --source=. \
     --cpu=2 \
-    --memory=2Gi \
+    --memory=1Gi \
     --max-instances=3 \
     --platform=managed \
     --region=europe-west1 \
