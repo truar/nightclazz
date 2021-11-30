@@ -26,11 +26,11 @@ export default {
   methods: {
     async fetchMessages() {
       // TODO-08 : Add missing URL
-      const response = await fetch('BACKEND_URL')
+      const response = await fetch('/api/messages')
       this.messages = await response.json()
     },
     async postMessage() {
-      await fetch('BACKEND_URL', {
+      await fetch('/api/messages', {
         method: 'POST',
         body: this.newMessageBody
       })

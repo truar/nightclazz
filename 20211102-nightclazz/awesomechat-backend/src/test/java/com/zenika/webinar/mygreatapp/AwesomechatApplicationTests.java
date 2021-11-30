@@ -1,4 +1,4 @@
-package com.zenika.nightclazz.awesomechat;
+package com.zenika.webinar.mygreatapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

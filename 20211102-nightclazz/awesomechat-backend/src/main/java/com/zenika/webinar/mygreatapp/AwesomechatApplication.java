@@ -1,4 +1,4 @@
-package com.zenika.nightclazz.awesomechat;
+package com.zenika.webinar.mygreatapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

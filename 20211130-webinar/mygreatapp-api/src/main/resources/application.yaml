@@ -1,4 +1,3 @@
-# TODO-06 : Add missing properties
 server:
   port: ${PORT:8080}
   servlet:
@@ -12,8 +11,3 @@ logging:
         web:
           filter:
             CommonsRequestLoggingFilter: DEBUG
-spring:
-  cloud:
-    gcp:
-      datastore:
-        namespace: ${DATASTORE_NAMESPACE:local}

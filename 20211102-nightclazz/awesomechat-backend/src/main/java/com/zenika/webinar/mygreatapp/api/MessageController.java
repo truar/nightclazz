@@ -1,7 +1,7 @@
-package com.zenika.nightclazz.awesomechat.api;
+package com.zenika.webinar.mygreatapp.api;
 
-import com.zenika.nightclazz.awesomechat.model.Message;
-import com.zenika.nightclazz.awesomechat.repository.MessageRepository;
+import com.zenika.webinar.mygreatapp.model.Message;
+import com.zenika.webinar.mygreatapp.repository.MessageRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;

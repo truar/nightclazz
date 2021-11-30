@@ -8,36 +8,19 @@
 		<version>2.5.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.zenika.nightclazz</groupId>
-	<artifactId>awesomechat-backend</artifactId>
+	<groupId>com.zenika.webinar</groupId>
+	<artifactId>mygreatapp-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>awesomechat-backend</name>
-	<description>Awesome chat deployed on Cloud Run</description>
+	<name>mygreatapp-api</name>
+	<description>Great application deployed on Cloud Run</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
 
-	<!-- TODO-01 Add BOM for Spring cloud gcp dependencies 1.2.5.RELEASE -->
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-gcp-dependencies</artifactId>
-				<version>1.2.5.RELEASE</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<!-- TODO-02 Add dependency for spring data and gcp datastore -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-gcp-starter-data-datastore</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

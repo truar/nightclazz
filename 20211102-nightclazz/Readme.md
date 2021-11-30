@@ -6,7 +6,7 @@ In this nightclazz, we are building and deploying an application using only serv
 
 * Slides on Serverless introduction
 * Manipulation of Google Cloud console
-    * Creation of the project 20211102-nightclazz
+    * Creation of the project nightclazz-20211102
     * Browsing some services (Cloud Run, Firestore)
     * Start the creation of Firestore in Datastore mode
 * Slides on Cloud Run
@@ -31,7 +31,7 @@ In this nightclazz, we are building and deploying an application using only serv
 
 # Creation of the project on Google Cloud
 
-* Create project in Google Cloud `20211102-nightclazz`
+* Create project in Google Cloud `nightclazz-20211102`
 * Enable cloudrun APIs (using the console)
 ```shell script
 gcloud services enable run.googleapis.com
@@ -41,7 +41,7 @@ gcloud services enable run.googleapis.com
 
 
 # Live code for the missing part
-* Go to 20211102-nightclazz/awesomechat-backend
+* Go to nightclazz-20211102/awesomechat-backend
 * Add dependencies to add gcp datastore support
 ```xml
 <dependencyManagement>
@@ -142,7 +142,7 @@ curl -d 'Hello world!' -H 'Content-Type: plain/text' -X POST {URL FROM CLOUD RUN
 * Go check the logs of Cloud Run to show them the ouput (start time and others)
 
 
-* Go to the 20211102-nightclazz/awesomechat-frontend
+* Go to the nightclazz-20211102/awesomechat-frontend
 * Check the vue.config.js file (for local reverse proxy)
 * Check the `awesomechat.vue` file (only add the url missing)
 ```js
@@ -177,11 +177,11 @@ yarn build
 
 * Go to firebase Console
 * Add the project as Firebase resource
-    * Name: 20211102-nightclazz
+    * Name: nightclazz-20211102
     * No need for Analytics
 * Then, make your frontend a firebase hosting project : `firebase init`
     * Select `Hosting`
-    * Set the project ID: 20211102-nightclazz
+    * Set the project ID: nightclazz-20211102
     * dist as public folder
     * index.html a rewrite rule
 
@@ -199,10 +199,10 @@ yarn build
 * Deploying using Firebase cmd (check for parameters)
     * 
 ```shell script
-firebase deploy --project=20211102-nightclazz --only hosting
+firebase deploy --project=nightclazz-20211102 --only hosting
 ```
 
-* Go to the website (URL on firebase: https://20211102-nightclazz.web.app/)
+* Go to the website (URL on firebase: https://nightclazz-20211102.web.app/)
 
 Bonus:
 * Deployment using a descriptor file
