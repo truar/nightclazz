@@ -39,13 +39,11 @@ gcloud services enable run.googleapis.com
 ```yaml
 server:
     port: ${PORT:8080}
-    servlet:
-        context-path: /api
 ```
 
 * If you want to try to post a message once the server is deployed
 ```
-curl http://localhost:8080/api/
+curl http://localhost:8080/
 ```
 
 # Deploy the application on Cloud Run (using buildpacks) (5' in total)
@@ -61,9 +59,31 @@ gcloud run deploy mygreatapp-api --source=. \
     --region=europe-west1 \
     --allow-unauthenticated
 
-curl {URL_FROM_CLOUD_RUN}/api/
+curl {URL_FROM_CLOUD_RUN}/
 ```
 * Go check the logs of Cloud Run to show them the output (start time and others)
+
+* Add an emojis to the controller to deploy a new version
+```
+public String readAllMessages() {
+        return "Hello from Cloud Run 🚀!";
+    }
+```
+
+* Deploy the new version without traffic to enable preview, manual tests...
+```
+gcloud run deploy mygreatapp-api --source=. \
+    --cpu=2 \
+    --memory=1Gi \
+    --max-instances=3 \
+    --platform=managed \
+    --region=europe-west1 \
+    --allow-unauthenticated \
+    --no-traffic
+```
+* Add a revision URL (rocket)
+* Migrate Traffic 50/50 and GET different output
+* Once test okay, migrate traffic from one revision to another
 
 Bonus:
 * Deployment using a descriptor file
