@@ -1,7 +1,7 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  name: awesomechat-backend
+  name: mygreatapp-api
   labels:
     cloud.googleapis.com/location: europe-west1
 spec:
@@ -13,10 +13,7 @@ spec:
       containerConcurrency: 80
       timeoutSeconds: 300
       containers:
-      - image: europe-west1-docker.pkg.dev/nightclazz-preparation-0211/cloud-run-source-deploy/awesomechat-backend:latest
-        env:
-        - name: DATASTORE_NAMESPACE
-          value: cloud
+      - image: europe-west1-docker.pkg.dev/webinar-20211130/cloud-run-source-deploy/mygreatapp-api:latest
         resources:
           limits:
             cpu: 2

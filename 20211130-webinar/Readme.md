@@ -14,11 +14,6 @@ In this webinar, we are building and deploying an application on Cloud Run. It i
     * Deploy the application on Cloud Run (using buildpacks)
     * Post new messages
     * Go check content in the Datastore service
-* Slides on Firebase
-* Back to the application (the frontend)
-    * Live code for the missing part
-    * Go the application hosted on Firebase
-    * Post a new message and check the application being updated
 * Other topic to discuss
     * Application authentication (Identity platform, Firebase authentication)
     * Continuous integration using Cloud Build
@@ -37,9 +32,8 @@ gcloud services enable run.googleapis.com
 ```
 
 
-
-# Show the important point of the application
-* Go to 20211130-webinar/awesomechat-backend
+# Show the important parts of the application
+* Go to 20211130-webinar/mygreatapp-api
 * Check the controller to see what we are exposing
 * Configure in the application.yaml the namespace
 ```yaml
@@ -54,7 +48,7 @@ server:
 curl http://localhost:8080/api/
 ```
 
-# Deploy the application on Cloud Run (using buildpacks)
+# Deploy the application on Cloud Run (using buildpacks) (5' in total)
 
 * Deploy on CloudRun using buildpacks (and enable APIs when prompted)
 ```
